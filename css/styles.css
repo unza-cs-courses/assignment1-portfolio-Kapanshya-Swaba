@@ -21,38 +21,72 @@ DO NOT use CSS frameworks (Bootstrap, Tailwind, etc.)
    ============================================================ */
 :root {
     /* Colors - TODO: Customize your color palette */
-    --color-primary: /* Your primary color */;
-    --color-primary-dark: /* Darker shade */;
-    --color-secondary: /* Secondary color */;
-    --color-text: /* Main text color */;
-    --color-text-light: /* Lighter text */;
-    --color-background: /* Page background */;
-    --color-background-alt: /* Alternate background */;
-    --color-border: /* Border color */;
+    --color-primary: #53565a
+        /* Your primary color */
+    ;
+    --color-primary-dark: #585b5f
+        /* Darker shade */
+    ;
+    --color-secondary: #223b57
+        /* Secondary color */
+    ;
+    --color-text: #ffffff
+        /* Main text color */
+    ;
+    --color-text-light: #ffffff
+        /* Li 	#585b5fghter text */
+    ;
+    --color-background: #006666
+        /* Page background */
+    ;
+    --color-background-alt: #9dbcbc
+        /* Alternate background */
+    ;
+    --color-border: #82fff3
+        /* Border color */
+    ;
 
-    /* Typography - TODO: Define your font sizes */
-    --font-family: /* Your font stack */;
-    --font-size-base: /* Base size, e.g., 16px */;
-    --font-size-sm: /* Small text */;
-    --font-size-lg: /* Large text */;
-    --font-size-xl: /* Extra large */;
-    --font-size-2xl: /* Headings */;
-    --font-size-3xl: /* Large headings */;
+    /* Typography - TODO: Def 	#9dbcbcine your font sizes */
+    --font-size-base: clamp(0.875rem, 0.4vw + 0.8rem, 1rem);
+    /* 14px -> 16px */
+    --font-size-sm: calc(var(--font-size-base) * 0.875);
+    /* ~14px */
+    --font-size-lg: calc(var(--font-size-base) * 1.25);
+    /* ~20px */
+    --font-size-xl: calc(var(--font-size-base) * 1.5);
+    /* ~24px */
+    --font-size-2xl: clamp(1.5rem, 2vw + 1rem, 2rem);
+    /* 24px -> 32px */
+    --font-size-3xl: clamp(2rem, 3vw + 1rem, 3rem);
 
     /* Spacing - TODO: Define spacing scale */
-    --spacing-xs: /* Extra small */;
-    --spacing-sm: /* Small */;
-    --spacing-md: /* Medium */;
-    --spacing-lg: /* Large */;
-    --spacing-xl: /* Extra large */;
+    --spacing-xs: 0.25rem
+        /* Extra small */
+    ;
+    --spacing-sm: 0.5rem
+        /* Small */
+    ;
+    --spacing-md: 1rem
+        /* Medium */
+    ;
+    --spacing-lg: 2rem
+        /* Large */
+    ;
+    --spacing-xl: 4rem
+        /* Extra large */
+    ;
 
     /* Layout */
-    --max-width: /* Container max-width */;
-    --border-radius: /* Default border radius */;
+    --max-width: 1200px
+        /* Container max-width */
+    ;
+    --border-radius: 0.5rem
+        /* Default border radius */
+    ;
 
     /* Transitions */
-    --transition-fast: /* Fast transition */;
-    --transition-normal: /* Normal transition */;
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ============================================================
@@ -63,30 +97,46 @@ DO NOT use CSS frameworks (Bootstrap, Tailwind, etc.)
 *::before,
 *::after {
     /* TODO: box-sizing, margin, padding reset */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     /* TODO: scroll-behavior, font-size */
+    scroll-behavior: smooth;
+    font-size: var(--font-size-base);
+    margin: 0;
 }
 
 body {
     /* TODO: font-family, color, background-color, line-height */
+    font-family: var(--font-family);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
 }
 
 img {
     /* TODO: Make images responsive */
+    max-width: 100%;
+    height: auto;
 }
 
 a {
     /* TODO: Link styles */
+    text-decoration: none;
 }
 
 a:hover {
     /* TODO: Link hover state */
+
+    /* Corrected property */
 }
 
 ul {
     /* TODO: List reset */
+    list-style: none;
 }
 
 /* ============================================================
@@ -100,6 +150,11 @@ ul {
      * - margin: 0 auto
      * - padding
      */
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: var(--spacing-md);
+
 }
 
 /* ============================================================
@@ -114,26 +169,65 @@ ul {
      * - text-align, cursor
      * - transition
      */
+
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
 }
 
 .btn--primary {
     /* TODO: Primary button (filled) */
+    background-color: var(--color-secondary);
+    color: white;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s;
 }
 
 .btn--primary:hover {
     /* TODO: Primary button hover */
+    background-color: #5649c0;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+
 }
 
 .btn--outline {
     /* TODO: Outline button (bordered) */
+ 
+    border: 2px solid;
+    color: var(--color-text)
 }
 
 .btn--outline:hover {
     /* TODO: Outline button hover */
+    background-color: #000;
+    color: white;
 }
 
 .btn--small {
     /* TODO: Small button variant */
+    padding: 0.4rem 0.8rem;
+    font-size: var(--font-size-sm);
 }
 
 /* ============================================================
@@ -155,24 +249,66 @@ ul {
      * - justify-content: space-between
      * - align-items: center
      */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    position: relative;
 }
 
 .nav__logo a {
     /* TODO: Logo styles */
+    color: var(--color-text)
 }
 
 .nav__menu {
     /* TODO: Style navigation menu
        Mobile: Stack vertically or hide
        Desktop: Horizontal with Flexbox */
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
 }
 
 .nav__menu a {
     /* TODO: Navigation link styles */
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+/* --- The Checkbox Hack Logic --- */
+.nav__checkbox {
+    display: none;
+    /* Always hidden */
+}
+
+.nav__burger {
+    display: none;
+    /* Hidden on desktop */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: currentColor;
+    border-radius: var(--border-radius);
+    transition: var(--transition-normal);
 }
 
 .nav__menu a:hover {
     /* TODO: Navigation link hover */
+    background-color: var(--color-background-alt);
+    border-radius: var(--border-radius);
+    transition: (--transition-normal);
+    text-decoration: underline;
 }
 
 /* ============================================================
@@ -183,14 +319,21 @@ ul {
     /* TODO: Style hero section
        Consider: min-height, background, centering content
        Use Flexbox for centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .hero__content h1 {
     /* TODO: Style your name */
+    text-align: center;
+    margin: 0.5rem;
 }
 
 .hero__tagline {
-    /* TODO: Style tagline */
+    text-align: center;
 }
 
 /* ============================================================
@@ -199,10 +342,12 @@ ul {
    ============================================================ */
 .about {
     /* TODO: Section padding */
+
 }
 
 .about h2 {
     /* TODO: Section heading */
+    color: rgb(7, 175, 241);
 }
 
 .about__content {
@@ -213,6 +358,10 @@ ul {
 
 .about__image img {
     /* TODO: Style profile image */
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-border);
 }
 
 .about__text p {
@@ -242,6 +391,7 @@ ul {
 
 .projects h2 {
     /* TODO: Section heading */
+    text-align: center;
 }
 
 .projects__grid {
@@ -249,6 +399,10 @@ ul {
        Mobile: 1 column
        Tablet: 2 columns
        Desktop: 3 columns */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
 }
 
 .project-card {
@@ -256,14 +410,30 @@ ul {
      * - background, border-radius, overflow
      * - box-shadow, transition
      */
+    display: flex;
+    flex-direction: column;
+    background: #535353;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    cursor: pointer;
 }
+
 
 .project-card:hover {
     /* TODO: Card hover effect */
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .project-card img {
     /* TODO: Project image */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .project-card__content {
@@ -301,10 +471,14 @@ ul {
 
 .form-group {
     /* TODO: Form group spacing */
+    margin-bottom: 1rem;
 }
 
 .form-group label {
     /* TODO: Label styles */
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
 .form-group input,
@@ -315,11 +489,15 @@ ul {
      * - font-family, font-size
      * - transition
      */
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--secondary-color);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     /* TODO: Focus state */
+
 }
 
 .form-group textarea {
@@ -335,7 +513,11 @@ ul {
      * - background, color, padding
      * - text-align
      */
+    background-color: var(--footer-background);
+    padding: 1rem;
+    text-align: center;
 }
+
 
 .footer .container {
     /* TODO: Footer layout (Flexbox) */
@@ -343,10 +525,15 @@ ul {
 
 .footer__social {
     /* TODO: Social links container */
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 .footer__social a {
     /* TODO: Social link styles */
+    display: inline-block;
+    margin-right: 1rem;
 }
 
 .footer__social a:hover {
@@ -361,12 +548,81 @@ ul {
    for larger screens below.
    ============================================================ */
 
+@media (max-width: 768px) {
+    .nav__burger {
+        display: flex;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Hidden off-screen */
+        width: 70%;
+        height: 100vh;
+        background-color: #fff;
+        /* Or your theme color */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right var(--transition-normal);
+    }
+
+    /* Show menu when checkbox is checked */
+    .nav__checkbox:checked~.nav__menu {
+        right: 0;
+    }
+
+    /* Transform Burger to 'X' when checked */
+    .nav__checkbox:checked+.nav__burger .burger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav__checkbox:checked+.nav__burger .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav__checkbox:checked+.nav__burger .burger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+}
+
 /* Tablet (768px and up) */
 @media (min-width: 768px) {
     /* TODO: Add tablet styles
        - Adjust typography sizes
        - Change layouts (Grid columns, Flexbox directions)
        - Adjust spacing */
+
+
 }
 
 /* Desktop (1024px and up) */

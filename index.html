@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website for [Your Name]">
+    <meta name="description" content="Professional portfolio website for kapanshya swaba">
     <title>Portfolio - [Your Name]</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <!--
     ============================================================
@@ -33,8 +35,17 @@
                  - Active state indication
             -->
             <div class="nav__logo">
-                <a href="#home">[Your Name]</a>
+                <a href="#home">KAPANSHYA SWABA</a>
             </div>
+
+            <input type="checkbox" id="menu-toggle" class="nav__checkbox">
+
+            <label for="menu-toggle" class="nav__burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </label>
+
             <ul class="nav__menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -54,11 +65,11 @@
                  - Call-to-action button
                  - Consider using Flexbox for layout
             -->
-            <div class="hero__content">
-                <h1>Your Name</h1>
+            <div class="hero__content" style="text-align: center;">
+                <h1>Kapanshya Swaba</h1>
                 <p class="hero__tagline">
                     <!-- TODO: Add your professional tagline -->
-                    Web Developer | Designer | Problem Solver
+                    Web Developer | Network Engineer | Security Analyst
                 </p>
                 <a href="#contact" class="btn btn--primary">Get In Touch</a>
             </div>
@@ -75,11 +86,11 @@
                  - Use CSS Grid or Flexbox for layout
             -->
             <div class="container">
-                <h2>About Me</h2>
+                <h2 style="text-align: center; margin: 1rem;">About Me</h2>
                 <div class="about__content">
-                    <div class="about__image">
+                    <div class="about__image" style="text-align: center;">
                         <!-- TODO: Add your profile image -->
-                        <img src="images/profile-placeholder.jpg" alt="Profile photo of [Your Name]">
+                        <img src="images/IMG-20241130-WA0003.jpg" alt="Profile photo of Kapanshya Swaba">
                     </div>
                     <div class="about__text">
                         <p>
@@ -123,7 +134,7 @@
                     <!-- Project Card 1 -->
                     <article class="project-card">
                         <!-- TODO: Replace with your project -->
-                        <img src="images/project1-placeholder.jpg" alt="Screenshot of Project 1">
+                        <img src="images/marek-piwnicki-A1IoRfRQHuk-unsplash.jpg" alt="Screenshot of Project 1">
                         <div class="project-card__content">
                             <h3>Project Title 1</h3>
                             <p>
@@ -131,8 +142,8 @@
                                 What problem does it solve?
                             </p>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="#" class="btn btn--small ">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline ">GitHub</a>
                             </div>
                         </div>
                     </article>
@@ -140,7 +151,7 @@
                     <!-- Project Card 2 -->
                     <article class="project-card">
                         <!-- TODO: Replace with your project -->
-                        <img src="images/project2-placeholder.jpg" alt="Screenshot of Project 2">
+                        <img src="images/marek-piwnicki-A1IoRfRQHuk-unsplash.jpg" alt="Screenshot of Project 2">
                         <div class="project-card__content">
                             <h3>Project Title 2</h3>
                             <p>
@@ -194,44 +205,20 @@
                 <form class="contact__form" action="#" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            placeholder="Your Name"
-                            minlength="2"
-                        >
+                        <input type="text" id="name" name="name" required placeholder="Your Name" minlength="2">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            placeholder="your.email@example.com"
-                        >
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            placeholder="What is this regarding?"
-                        >
+                        <input type="text" id="subject" name="subject" placeholder="What is this regarding?">
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            required
-                            rows="5"
-                            placeholder="Your message..."
-                            minlength="10"
-                        ></textarea>
+                        <textarea id="message" name="message" required rows="5" placeholder="Your message..."
+                            minlength="10"></textarea>
                     </div>
                     <button type="submit" class="btn btn--primary">Send Message</button>
                 </form>
@@ -248,7 +235,7 @@
              - Back to top link (optional)
         -->
         <div class="container">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+            <p>&copy; 2025 Kapanshya swaba. All rights reserved.</p>
             <nav class="footer__social">
                 <!-- TODO: Add your social media links -->
                 <a href="#" aria-label="GitHub">GitHub</a>
@@ -258,4 +245,5 @@
         </div>
     </footer>
 </body>
+
 </html>
