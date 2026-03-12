@@ -386,13 +386,16 @@ ul {
 
 .about__content {
     display: flex;
-    flex-direction: column; /* Stack on mobile */
-    align-items: center;    /* Center everything on mobile */
+    flex-direction: column;
+    /* Stack on mobile */
+    align-items: center;
+    /* Center everything on mobile */
     gap: 3rem;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 2rem;
 }
+
 .about__image img {
     /* TODO: Style profile image */
 
@@ -734,12 +737,21 @@ ul {
     /* about section side-by-side */
     .about__content {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
+        gap: var(--spacing-lg);
     }
 
-    .about__text,
     .about__image {
+        flex: 0 0 300px;
+    }
+
+    .about__text {
         flex: 1;
+        text-align: left;
+    }
+
+    .about__text p {
+        text-align: left;
     }
 
     /* project grid two columns */
@@ -793,30 +805,39 @@ ul {
 
 @media (min-width: 992px) {
     .about__content {
-        flex-direction: row;      /* Side-by-side on desktop */
-        align-items: flex-start;  /* Align to the top of the text */
+        flex-direction: row;
+        /* Side-by-side on desktop */
+        align-items: flex-start;
+        /* Align to the top of the text */
         justify-content: center;
-        text-align: left;         /* Reset text alignment for desktop */
+        text-align: left;
+        /* Reset text alignment for desktop */
     }
 
     .about__image {
-        flex: 0 0 350px; /* Force the image container to stay 350px wide */
-        position: sticky; /* Optional: keeps image in view while reading bio */
+        flex: 0 0 350px;
+        /* Force the image container to stay 350px wide */
+        position: sticky;
+        /* Optional: keeps image in view while reading bio */
         top: 100px;
     }
 
     .about__text {
-        flex: 1; /* Bio takes the remaining space */
+        flex: 1;
+        /* Bio takes the remaining space */
     }
 
     .about__text p {
-        text-align: left; /* Changes that centered text in your screenshot */
+        text-align: left;
+        /* Changes that centered text in your screenshot */
     }
-    
+
     .skills-list {
-        justify-content: flex-start; /* Aligns skill tags to the left */
+        justify-content: flex-start;
+        /* Aligns skill tags to the left */
     }
 }
+
 /* Large Desktop (1200px and up) */
 @media (min-width: 1200px) {
     .container {
@@ -831,12 +852,14 @@ ul {
         padding: var(--spacing-xl) 0;
     }
 }
+
 /* Print Styles */
 @media print {
+
     /* 1. Hide non-essential web elements */
-    .header, 
-    .footer, 
-    .btn, 
+    .header,
+    .footer,
+    .btn,
     .mode-toggle-container,
     #menu-toggle,
     .nav__burger {
@@ -863,7 +886,8 @@ ul {
     }
 
     /* 4. Ensure sections don't break awkwardly across pages */
-    h2, h3 {
+    h2,
+    h3 {
         page-break-after: avoid;
     }
 
@@ -879,6 +903,7 @@ ul {
         color: #666;
     }
 }
+
 /* ============================================================
    ADDITIONAL STYLES
    TODO: Add any additional styles you need
@@ -909,4 +934,3 @@ body.dark-mode {
     --button-bg-color: #ffffff;
     --button-text-color: #000000;
 }
-
