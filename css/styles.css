@@ -126,13 +126,18 @@ img {
 a {
     /* TODO: Link styles */
     text-decoration: none;
+    color: var(--color-text);
 }
 
 a:hover {
     /* TODO: Link hover state */
+    color: var(--color-secondary);
+   
+
+}
 
     /* Corrected property */
-}
+
 
 ul {
     /* TODO: List reset */
@@ -241,6 +246,13 @@ ul {
 .header {
     /* TODO: Style the header
        Consider: position, background, padding, box-shadow, z-index */
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background);
+    padding: var(--spacing-md) 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
 }
 
 .nav {
@@ -261,6 +273,7 @@ ul {
 .nav__logo a {
     /* TODO: Logo styles */
     color: var(--color-text)
+    
 }
 
 .nav__menu {
@@ -342,18 +355,24 @@ ul {
    ============================================================ */
 .about {
     /* TODO: Section padding */
+        padding: var(--spacing-lg) 0;
 
 }
 
 .about h2 {
     /* TODO: Section heading */
     color: rgb(7, 175, 241);
+
 }
 
 .about__content {
     /* TODO: Use CSS Grid or Flexbox for layout
        Mobile: Stack image above text
        Desktop: Side by side */
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+
 }
 
 .about__image img {
@@ -366,19 +385,31 @@ ul {
 
 .about__text p {
     /* TODO: Paragraph styles */
+    text-align: center;
+
 }
 
 .about__text h3 {
     /* TODO: Subheading styles */
+    text-align: center;
+    
 }
 
 .skills-list {
     /* TODO: Style skills list
        Consider: Flexbox, tags/badges style */
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+
 }
 
 .skills-list li {
     /* TODO: Individual skill badge */
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--border-radius);
 }
 
 /* ============================================================
@@ -387,6 +418,8 @@ ul {
    ============================================================ */
 .projects {
     /* TODO: Section styling */
+        padding: var(--spacing-lg) 0;
+
 }
 
 .projects h2 {
@@ -438,18 +471,25 @@ ul {
 
 .project-card__content {
     /* TODO: Card content area */
+    padding: var(--spacing-md);
+
 }
 
 .project-card__content h3 {
     /* TODO: Project title */
+    text-align: center;
 }
 
 .project-card__content p {
     /* TODO: Project description */
+    text-align: center;
 }
 
 .project-card__links {
     /* TODO: Links container (Flexbox) */
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm); 
 }
 
 /* ============================================================
@@ -458,15 +498,19 @@ ul {
    ============================================================ */
 .contact {
     /* TODO: Section styling */
+        padding: var(--spacing-lg) 0;
 }
 
 .contact h2 {
     /* TODO: Section heading */
+    text-align: center;
 }
 
 .contact__form {
     /* TODO: Style contact form
        Consider: max-width, centering */
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .form-group {
@@ -497,11 +541,15 @@ ul {
 .form-group input:focus,
 .form-group textarea:focus {
     /* TODO: Focus state */
+    border-color: var(--color-primary);
+    outline: none;
 
 }
 
 .form-group textarea {
     /* TODO: Textarea specific styles */
+    resize: vertical;
+
 }
 
 /* ============================================================
@@ -521,6 +569,9 @@ ul {
 
 .footer .container {
     /* TODO: Footer layout (Flexbox) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer__social {
@@ -538,6 +589,7 @@ ul {
 
 .footer__social a:hover {
     /* TODO: Social link hover */
+    color: var(--color-primary);
 }
 
 /* ============================================================
