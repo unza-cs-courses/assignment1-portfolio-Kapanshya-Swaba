@@ -148,6 +148,12 @@ https://www.sitepoint.com/css-printer-friendly-pages/
 
 #css dark mode
 https://dev.to/mdhassanpatwary/creating-a-css-darklight-mode-switcher-26cd
+https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
+
+#CSS Hamburger Menu
+https://mukundkumra.medium.com/create-a-responsive-hamburger-menu-with-html-and-css-a-step-by-step-tutorial-c63e44fcee2e
+
+https://alvarotrigo.com/blog/hamburger-menu-css/
 ---
 
 ## Academic Integrity
