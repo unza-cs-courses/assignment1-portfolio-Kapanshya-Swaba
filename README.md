@@ -132,26 +132,10 @@ Before submitting, verify:
 **Design Theme:** [Describe your portfolio theme/style]
 
 ### CSS Techniques Used
-- [ 
-    .dark-mode
-    button
-
-] CSS Custom Properties
-- [ 
-    About Section,
-    
-
-] Flexbox
-- [ 
-    cards,
-
-] CSS Grid
-- [ 
-    print,
-    min-width:768px
-
-
-] Media Queries
+- [ .dark-mode,button] CSS Custom Properties
+- [ About Section, Navigation Menu] Flexbox
+- [ project cards] CSS Grid
+- [ print, min-width:768px] Media Queries
 - [ ] Other: _______________
 
 ### Challenges & Solutions
@@ -159,7 +143,11 @@ Before submitting, verify:
 
 ### Credits
 [List any images, fonts, or resources used with attribution]
+print media querie
+https://www.sitepoint.com/css-printer-friendly-pages/
 
+#css dark mode
+https://dev.to/mdhassanpatwary/creating-a-css-darklight-mode-switcher-26cd
 ---
 
 ## Academic Integrity
