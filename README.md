@@ -127,15 +127,31 @@ Before submitting, verify:
 
 ## Your Information
 
-**Name:** [Your Name]
-**Student ID:** [Your Student ID]
+**Name:** Kapanshya Swaba
+**Student ID:** 2021434141
 **Design Theme:** [Describe your portfolio theme/style]
 
 ### CSS Techniques Used
-- [ ] CSS Custom Properties
-- [ ] Flexbox
-- [ ] CSS Grid
-- [ ] Media Queries
+- [ 
+    .dark-mode
+    button
+
+] CSS Custom Properties
+- [ 
+    About Section,
+    
+
+] Flexbox
+- [ 
+    cards,
+
+] CSS Grid
+- [ 
+    print,
+    min-width:768px
+
+
+] Media Queries
 - [ ] Other: _______________
 
 ### Challenges & Solutions
