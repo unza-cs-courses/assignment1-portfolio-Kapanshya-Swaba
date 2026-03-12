@@ -45,18 +45,26 @@ DO NOT use CSS frameworks (Bootstrap, Tailwind, etc.)
     --color-border: #82fff3
         /* Border color */
     ;
-    --bg-color: #ffffff; /* whiteBackground color */
-    --text-color: #000000;/* DarkMode Background color */
-    --button-bg-color: #000000; /* Light mode Button color */
-    --button-text-color: #ffffff; /* Dark mode Button color*/
+    --bg-color: #ffffff;
+    /* whiteBackground color */
+    --text-color: #000000;
+    /* DarkMode Background color */
+    --button-bg-color: #000000;
+    /* Light mode Button color */
+    --button-text-color: #ffffff;
+    /* Dark mode Button color*/
 
     /* Typography - TODO: Def 	#9dbcbcine your font sizes */
+
     --font-size-base: clamp(0.875rem, 0.4vw + 0.8rem, 1rem);
     /* 14px -> 16px */
+
     --font-size-sm: calc(var(--font-size-base) * 0.875);
     /* ~14px */
+
     --font-size-lg: calc(var(--font-size-base) * 1.25);
     /* ~20px */
+
     --font-size-xl: calc(var(--font-size-base) * 1.5);
     /* ~24px */
     --font-size-2xl: clamp(1.5rem, 2vw + 1rem, 2rem);
@@ -366,7 +374,7 @@ ul {
    ============================================================ */
 .about {
     /* TODO: Section padding */
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-xl) 0;
 
 }
 
@@ -377,15 +385,14 @@ ul {
 }
 
 .about__content {
-    /* TODO: Use CSS Grid or Flexbox for layout
-       Mobile: Stack image above text
-       Desktop: Side by side */
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-
+    flex-direction: column; /* Stack on mobile */
+    align-items: center;    /* Center everything on mobile */
+    gap: 3rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem;
 }
-
 .about__image img {
     /* TODO: Style profile image */
 
@@ -784,6 +791,32 @@ ul {
     }
 }
 
+@media (min-width: 992px) {
+    .about__content {
+        flex-direction: row;      /* Side-by-side on desktop */
+        align-items: flex-start;  /* Align to the top of the text */
+        justify-content: center;
+        text-align: left;         /* Reset text alignment for desktop */
+    }
+
+    .about__image {
+        flex: 0 0 350px; /* Force the image container to stay 350px wide */
+        position: sticky; /* Optional: keeps image in view while reading bio */
+        top: 100px;
+    }
+
+    .about__text {
+        flex: 1; /* Bio takes the remaining space */
+    }
+
+    .about__text p {
+        text-align: left; /* Changes that centered text in your screenshot */
+    }
+    
+    .skills-list {
+        justify-content: flex-start; /* Aligns skill tags to the left */
+    }
+}
 /* Large Desktop (1200px and up) */
 @media (min-width: 1200px) {
     .container {
@@ -798,7 +831,54 @@ ul {
         padding: var(--spacing-xl) 0;
     }
 }
+/* Print Styles */
+@media print {
+    /* 1. Hide non-essential web elements */
+    .header, 
+    .footer, 
+    .btn, 
+    .mode-toggle-container,
+    #menu-toggle,
+    .nav__burger {
+        display: none !important;
+    }
 
+    /* 2. Reset colors for ink-saving */
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 3. Keep your Profile Image but make it smaller */
+    .about__image img {
+        max-width: 150px;
+        border: 1px solid #ccc;
+    }
+
+    /* 4. Ensure sections don't break awkwardly across pages */
+    h2, h3 {
+        page-break-after: avoid;
+    }
+
+    section {
+        page-break-inside: avoid;
+        margin-bottom: 20pt;
+    }
+
+    /* 5. Show URLs next to links (since they can't be clicked) */
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+}
 /* ============================================================
    ADDITIONAL STYLES
    TODO: Add any additional styles you need
@@ -818,6 +898,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 button:hover {
     opacity: 0.8;
 }
@@ -828,3 +909,4 @@ body.dark-mode {
     --button-bg-color: #ffffff;
     --button-text-color: #000000;
 }
+
