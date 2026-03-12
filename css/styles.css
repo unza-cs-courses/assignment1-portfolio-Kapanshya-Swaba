@@ -456,7 +456,7 @@ ul {
      */
     display: flex;
     flex-direction: column;
-    background: #535353;
+    background: transparent;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
