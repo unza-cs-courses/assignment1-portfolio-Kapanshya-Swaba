@@ -129,31 +129,41 @@ Before submitting, verify:
 
 **Name:** Kapanshya Swaba
 **Student ID:** 2021434141
-**Design Theme:** [Describe your portfolio theme/style]
+**Design Theme:** [
 
 ### CSS Techniques Used
-- [ .dark-mode,button] CSS Custom Properties
-- [ About Section, Navigation Menu] Flexbox
-- [ project cards] CSS Grid
-- [ print, min-width:768px] Media Queries
-- [ ] Other: _______________
+- [] CSS Custom Properties: .dark-mode,button
+- [] Flexbox: navigation menu, b
+- [] CSS Grid: project__grid
+- [] Media Queries: print, min-width:768px,max-width:480px
+- [] Other: cubic-bezier,clamp()
 
 ### Challenges & Solutions
 [Describe any challenges you faced and how you solved them]
 
 ### Credits
 [List any images, fonts, or resources used with attribution]
-print media querie
-https://www.sitepoint.com/css-printer-friendly-pages/
 
-#css dark mode
-https://dev.to/mdhassanpatwary/creating-a-css-darklight-mode-switcher-26cd
-https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
+[]print media querie
+-https://www.sitepoint.com/css-printer-friendly-pages/
 
-#CSS Hamburger Menu
-https://mukundkumra.medium.com/create-a-responsive-hamburger-menu-with-html-and-css-a-step-by-step-tutorial-c63e44fcee2e
+[]css dark mode
+-https://dev.to/mdhassanpatwary/creating-a-css-darklight-mode-switcher-26cd
+-https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
 
-https://alvarotrigo.com/blog/hamburger-menu-css/
+[]CSS Hamburger Menu
+-https://mukundkumra.medium.com/create-a-responsive-hamburger-menu-with-html-and-css-a-step-by-step-tutorial-c63e44fcee2e
+-https://alvarotrigo.com/blog/hamburger-menu-css/
+
+[]other css properties
+-https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp
+-https://cubic-bezier.com/#.17,.67,.83,.67
+-https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/easing-function/cubic-bezier
+
+[]Color plattes
+-https://www.color-hex.com/color-palette/6174 main theme
+-https://www.color-hex.com/color-palette/12861
+
 ---
 
 ## Academic Integrity
