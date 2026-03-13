@@ -129,7 +129,10 @@ Before submitting, verify:
 
 **Name:** Kapanshya Swaba
 **Student ID:** 2021434141
-**Design Theme:** [
+**Design Theme:** 
+Color Palette: I chose a high-contrast Deep Charcoal and Cyan-Blue theme. The dark background reduces eye strain, while the Cyan-Blue accent provides a high-energy, high-tech feel that highlights interactive elements like buttons and links.
+
+Typography: The Raleway font was selected for its elegant yet geometric letterforms. It strikes a balance between being approachable (for clients) and precise (for engineering-focused employers).
 
 ### CSS Techniques Used
 - [] CSS Custom Properties: .dark-mode,button
